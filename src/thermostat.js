@@ -7,12 +7,28 @@ function Thermostat() {
   this.powerSavingMode = true;
 };
 
+Thermostat.prototype.getTemperature = function() {
+  return this.temperature;
+};
+
+Thermostat.prototype.getMinTemp = function() {
+  return this.minTemp;
+};
+
+Thermostat.prototype.getMaxTemp = function() {
+  return this.maxTemp;
+};
+
 Thermostat.prototype.up = function() {
   this.temperature++;
 };
 
 Thermostat.prototype.down = function() {
-  if (this.temperature > this.minTemp) this.temperature--;
+  if (this.getTemperature() > this.getMinTemp()) this.temperature--;
+};
+
+Thermostat.prototype.isPowerSavingModeOn = function () {
+  return this.powerSavingMode;
 };
 
 Thermostat.prototype.powerSavingModeOff = function() {
@@ -30,7 +46,7 @@ Thermostat.prototype.reset = function() {
 };
 
 Thermostat.prototype.energyUsage = function() {
-  if (this.temperature < 18) return "Low Usage";
-  if (this.temperature < 25) return "Medium Usage";
+  if (this.getTemperature() < 18) return "Low Usage";
+  if (this.getTemperature() < 25) return "Medium Usage";
   return "High Usage";
 };

@@ -53,6 +53,21 @@ describe("Thermostat", function() {
       thermostat.up();
       expect(thermostat.getTemperature()).toEqual(21);
     });
+    it("does not increase the temperature past the maximum when power saving mode is on", function() {
+      var times = 6;
+      for(var i=0; i < times; i++) {
+        thermostat.up();
+      };
+      expect(thermostat.getTemperature()).toEqual(25);
+    });
+    it("does not increase the temperature past the maximum when power saving mode is off", function() {
+      thermostat.powerSavingModeOff();
+      var times = 13;
+      for(var i=0; i < times; i++) {
+        thermostat.up();
+      };
+      expect(thermostat.getTemperature()).toEqual(32);
+    });
   });
 
   describe("Down", function() {

@@ -20,7 +20,7 @@ Thermostat.prototype.getMaxTemp = function() {
 };
 
 Thermostat.prototype.up = function() {
-  this.temperature++;
+  if (this.getTemperature() < this.MAXTEMP) this.temperature++;
 };
 
 Thermostat.prototype.down = function() {

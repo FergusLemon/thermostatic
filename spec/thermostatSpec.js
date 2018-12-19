@@ -10,26 +10,26 @@ describe("Thermostat", function() {
 
   describe("Temperature", function() {
     it("starts at 20 degrees celsius", function() {
-      expect(thermostat.getTemperature()).toEqual(20);
+      expect(thermostat.getTemperature()).toEqual(thermostat.DEFAULT_TEMP);
     });
   });
 
   describe("Minimum temperature", function() {
     it("is 10 degrees celsius", function() {
-      expect(thermostat.getMinTemp()).toEqual(10);
+      expect(thermostat.getMinTemp()).toEqual(thermostat.MIN_TEMP);
     });
   });
 
   describe("Maximum temperature", function() {
     it("is 25 degrees celsius when power saving mode is on", function() {
-      expect(thermostat.getMaxTemp()).toEqual(25);
+      expect(thermostat.getMaxTemp()).toEqual(thermostat.PSM_ON_MAX_TEMP);
       thermostat.powerSavingModeOff();
       thermostat.powerSavingModeOn();
-      expect(thermostat.getMaxTemp()).toEqual(25);
+      expect(thermostat.getMaxTemp()).toEqual(thermostat.PSM_ON_MAX_TEMP);
     });
     it("is 32 degrees celsius when power saving mode is off", function() {
       thermostat.powerSavingModeOff();
-      expect(thermostat.getMaxTemp()).toEqual(32);
+      expect(thermostat.getMaxTemp()).toEqual(thermostat.PSM_OFF_MAX_TEMP);
     });
   });
 
@@ -58,7 +58,7 @@ describe("Thermostat", function() {
       for(var i=0; i < times; i++) {
         thermostat.up();
       };
-      expect(thermostat.getTemperature()).toEqual(25);
+      expect(thermostat.getTemperature()).toEqual(thermostat.PSM_ON_MAX_TEMP);
     });
     it("does not increase the temperature past the maximum when power saving mode is off", function() {
       thermostat.powerSavingModeOff();
@@ -66,7 +66,7 @@ describe("Thermostat", function() {
       for(var i=0; i < times; i++) {
         thermostat.up();
       };
-      expect(thermostat.getTemperature()).toEqual(32);
+      expect(thermostat.getTemperature()).toEqual(thermostat.PSM_OFF_MAX_TEMP);
     });
   });
 
@@ -80,14 +80,14 @@ describe("Thermostat", function() {
       for(var i=0; i < times; i++) {
         thermostat.down();
       };
-      expect(thermostat.getTemperature()).toEqual(10);
+      expect(thermostat.getTemperature()).toEqual(thermostat.MIN_TEMP);
     });
   });
 
   describe("Reset", function() {
     it("changes the temperature back to 20 degrees celcius", function() {
       thermostat.reset();
-      expect(thermostat.getTemperature()).toEqual(20);
+      expect(thermostat.getTemperature()).toEqual(thermostat.DEFAULT_TEMP);
     });
   });
 
@@ -101,7 +101,7 @@ describe("Thermostat", function() {
       expect(thermostat.energyUsage()).toEqual("Medium Usage");
     });
     it("is high if the temperature is 25 degrees celcius or above", function() {
-      spyOn(thermostat, 'getTemperature').and.returnValue(25);
+      spyOn(thermostat, 'getTemperature').and.returnValue(thermostat.PSM_ON_MAX_TEMP);
       expect(thermostat.energyUsage()).toEqual("High Usage");
     });
   });

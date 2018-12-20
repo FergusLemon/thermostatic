@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/stylesheets/960_12_col.css">
     <link rel="stylesheet" href="../public/stylesheets/buttons.css">
+    <link rel="stylesheet" href="../public/stylesheets/text.css">
   </head>
   <body>
-    <div class="container_12 clearfix">
-      <div class="grid_12" id="header">
-        <h1>Thermostatic</h1>
+      <div>
+        <h1 id="header">Thermostatic</h1>
+        <button id="reset-temp">Reset</button>
       </div>
-      <div class="grid_3">
+      <div>
         <button id="increase-temp">
-          <i class="fas fa-plus"></i>
         </button>
       </div>
-      <div class="grid_6">
+      <div>
         <p id="temperature"></p>
       </div>
-      <div class="grid_3">
+      <div>
         <button id="decrease-temp">
-          <i class="fas fa-minus"></i>
         </button>
       </div>
-      <div class="grid_12">
-      </div>
-      <div class="grid_6">
+      <div>
         <label class="psm">
           <input id="psm-switch" type="checkbox">
           <span class="slider"></span>
         </label>
       </div>
-      <div class="grid_6">
-        <button id="reset-temp">Reset</button>
-      </div>
-    </div>
     <script src="../src/thermostat.js"></script>
     <script src="../src/jquery-3.3.1.min.js"></script>
     <script src="../src/interface.js"></script>

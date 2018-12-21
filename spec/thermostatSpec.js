@@ -55,6 +55,15 @@ describe("Thermostat", function() {
       thermostat.powerSavingModeOn();
       expect(thermostat.getTemperature()).toEqual(thermostat.PSM_ON_MAX_TEMP);
     });
+    it("doesn't change the temperature if it is below max temp when switched on", function() {
+      thermostat.powerSavingModeOff();
+      var times = 3;
+      for(var i=0; i < times; i++) {
+        thermostat.up();
+      };
+      thermostat.powerSavingModeOn();
+      expect(thermostat.getTemperature()).not.toEqual(thermostat.PSM_ON_MAX_TEMP);
+    });
   });
 
   describe("Up", function() {

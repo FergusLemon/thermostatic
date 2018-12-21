@@ -1,22 +1,26 @@
 #increase-temp, #decrease-temp {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   border-radius: 35px;
   outline: 0;
   color: #f2f2f2;
-  font-size: 25px;
+  font-size: 50px;
+  background-color: #336699;
+  position: absolute;
+  top: 200px;
 }
 
 #increase-temp {
-  background-color: #4775d1;
+  left: 250px;
 }
 
 #decrease-temp {
-  background-color: #336699;
+  right: 300px;
 }
 
 #reset-temp {
   border-radius: 15px;
+  outline: 0;
   background-color: #336699;
   color: #f2f2f2;
   font-size: 16px;
@@ -32,6 +36,8 @@
   height: 30px;
   position: absolute;
   display: inline-block;
+  top: 300px;
+  left: 550px;
   margin-top: 20px;
 }
 
@@ -44,11 +50,11 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  width: 55px;
+  width: 75px;
   height: 30px;
   padding-top: 5px;
   padding-left: 5px;
-  background-color: #66ff33;
+  background-color: #00b33c;
   transition: .5s;
   border-radius: 35px;
 }
@@ -57,20 +63,20 @@
   position: absolute;
   content: "";
   height: 25px;
-  width: 25px;
+  width: 30px;
   background-color: #FFFAF0;
   transition: .5s;
   border-radius: 15px;
 }
 
 input:checked + .slider {
-  background-color: #ff0000;
+  background-color: #e60000;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(36px);
+  -ms-transform: translateX(36px);
+  transform: translateX(36px);
 }
 /* CSS tips for the toggle button taken from w3schools.com, available at:
  * https://www.w3schools.com/howto/howto_css_switch.asp */

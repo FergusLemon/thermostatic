@@ -1,6 +1,8 @@
 #banner {
-  display: inline;
   width: 100%;
   background-color: #85a3e0;
+  margin: 0;
+}
+body {
   margin: 0;
 }

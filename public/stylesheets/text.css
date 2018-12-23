@@ -1,7 +1,8 @@
 #header {
   color: #f2f2f2;
   background-color: #85a3e0;
-  font-size: 50px;
+  font-size: 70px;
+  font-family: helvetica, arial, sans-serif;
   display: inline;
   padding-left: 20px;
 }
@@ -11,4 +12,11 @@
   position: absolute;
   top: -100px;
   left: 500px;
+}
+
+#psm-text {
+  font-size: 11px;
+  font-family: "courier new", courier, monospace;
+  margin-top: 20px;
+  padding-left: 15px;
 }

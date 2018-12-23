@@ -112,15 +112,15 @@ describe("Thermostat", function() {
   describe("Energy usage", function() {
     it("is low if the temperature is below 18 degrees celcius", function() {
       spyOn(thermostat, 'getTemperature').and.returnValue(17);
-      expect(thermostat.energyUsage()).toEqual("Low Usage");
+      expect(thermostat.energyUsage()).toEqual("low-usage");
     });
     it("is medium if the temperature is below 25 degrees celcius", function() {
       spyOn(thermostat, 'getTemperature').and.returnValue(24);
-      expect(thermostat.energyUsage()).toEqual("Medium Usage");
+      expect(thermostat.energyUsage()).toEqual("medium-usage");
     });
     it("is high if the temperature is 25 degrees celcius or above", function() {
       spyOn(thermostat, 'getTemperature').and.returnValue(thermostat.PSM_ON_MAX_TEMP);
-      expect(thermostat.energyUsage()).toEqual("High Usage");
+      expect(thermostat.energyUsage()).toEqual("high-usage");
     });
   });
 });

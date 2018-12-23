@@ -6,3 +6,15 @@
 body {
   margin: 0;
 }
+
+.low-usage {
+  background-color: #d9f2e6;
+}
+
+.medium-usage {
+  background-color: #f0f5f5;
+}
+
+.high-usage {
+  background-color: #ffe6e6;
+}

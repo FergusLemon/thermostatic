@@ -51,7 +51,7 @@ Thermostat.prototype.reset = function() {
 };
 
 Thermostat.prototype.energyUsage = function() {
-  if (this.getTemperature() < this.LOW_TEMP) return "Low Usage";
-  if (this.getTemperature() < this.PSM_ON_MAX_TEMP) return "Medium Usage";
-  return "High Usage";
+  if (this.getTemperature() < this.LOW_TEMP) return "low-usage";
+  if (this.getTemperature() < this.PSM_ON_MAX_TEMP) return "medium-usage";
+  return "high-usage";
 };

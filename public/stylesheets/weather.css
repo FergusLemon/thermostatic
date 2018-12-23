@@ -1,0 +1,29 @@
+#enter-city {
+  position: absolute;
+  display: inline;
+  top: 45px;
+  right: 40px;
+}
+
+li {
+  position: absolute;
+  display: inline;
+  width: 300px;
+  bottom: 50px;
+  font-size: 50px;
+  text-align: center;
+}
+
+#location-name {
+  left: 20px;
+  margin-left: 40px;
+}
+
+#location-weather {
+  left: 470px;
+}
+
+#location-temp {
+  right: 20px;
+  margin-right: 40px;
+}

@@ -4,11 +4,12 @@
     <link rel="stylesheet" href="../public/stylesheets/buttons.css">
     <link rel="stylesheet" href="../public/stylesheets/text.css">
     <link rel="stylesheet" href="../public/stylesheets/layout.css">
+    <link rel="stylesheet" href="../public/stylesheets/weather.css">
   </head>
   <body>
       <div id="banner">
         <h1 id="header">Thermostatic</h1>
-        <button id="reset-temp">Reset</button>
+        <input id="enter-city" type="text" placeholder="Enter City..."/>
       </div>
       <div>
         <button id="increase-temp">+</button>
@@ -25,9 +26,16 @@
           <span class="slider"></span>
           <p id="psm-text">Power Saving On</p>
         </label>
+        <button id="reset-temp">Reset</button>
       </div>
+      <ul id="location">
+        <li id="location-name"></li>
+        <li id="location-weather"></li>
+        <li id="location-temp"></li>
+      </ul>
     <script src="../src/thermostat.js"></script>
     <script src="../src/jquery-3.3.1.min.js"></script>
     <script src="../src/interface.js"></script>
+    <script src="../src/api.js"></script>
   </body>
 </html>

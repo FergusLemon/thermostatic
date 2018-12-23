@@ -21,15 +21,15 @@
 #reset-temp {
   border-radius: 15px;
   outline: 0;
-  background-color: #336699;
+  background-color: #ff8c1a;
   color: #f2f2f2;
   font-size: 16px;
-  height: 25px;
+  height: 35px;
   width: 100px;
+  position: absolute;
   display: inline;
-  float: right;
-  margin-top: 45px;
-  margin-right: 100px;
+  top: 370px;
+  left: 645px;
 }
 
 .psm {
@@ -37,7 +37,7 @@
   position: absolute;
   display: inline-block;
   top: 350px;
-  left: 525px;
+  left: 455px;
   margin-top: 20px;
 }
 

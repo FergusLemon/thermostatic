@@ -1,34 +1,34 @@
-$( document ).ready(function() {
+$(document).ready(function() {
   var thermostat = new Thermostat();
   function updateTempCheckUsage() {
-    $( "#temperature" ).text(thermostat.getTemperature());
-    $( "body" ).attr("class", thermostat.energyUsage());
+    $("#temperature").text(thermostat.getTemperature());
+    $("body").attr("class", thermostat.energyUsage());
   };
 
   updateTempCheckUsage();
 
-  $( "#increase-temp" ).click(function() {
+  $("#increase-temp").click(function() {
     thermostat.up();
     updateTempCheckUsage();
   });
 
-  $( "#decrease-temp" ).click(function() {
+  $("#decrease-temp").click(function() {
     thermostat.down();
     updateTempCheckUsage();
   });
 
-  $( "#reset-temp" ).click(function() {
+  $("#reset-temp").click(function() {
     thermostat.reset();
     updateTempCheckUsage();
   });
 
-  $( "#psm-switch" ).click(function() {
+  $("#psm-switch").click(function() {
     if (thermostat.isPowerSavingModeOn()) {
       thermostat.powerSavingModeOff();
-      $( "#psm-text" ).text("Power Saving Off");
+      $("#psm-text").text("Power Saving Off");
     } else {
       thermostat.powerSavingModeOn();
-      $( "#psm-text" ).text("Power Saving On");
+      $("#psm-text").text("Power Saving On");
     }
     updateTempCheckUsage();
   });

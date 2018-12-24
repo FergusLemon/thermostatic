@@ -80,3 +80,9 @@ input:checked + .slider:before {
 }
 /* CSS tips for the toggle button taken from w3schools.com, available at:
  * https://www.w3schools.com/howto/howto_css_switch.asp */
+
+#get-weather {
+  position: absolute;
+  top:58px;
+  right:75px;
+}

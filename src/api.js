@@ -28,6 +28,7 @@ $(document).ready(function() {
   $("#get-weather").click(function(event) {
     event.preventDefault();
     var city = $("#enter-city").val();
+    $.post("http://localhost:4567/location", { city: city });
     showWeather(city);
     $("#enter-city").val('');
   });

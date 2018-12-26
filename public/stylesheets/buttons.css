@@ -1,21 +1,21 @@
 #increase-temp, #decrease-temp {
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   border-radius: 35px;
   outline: 0;
   color: #f2f2f2;
-  font-size: 50px;
+  font-size: 25px;
   background-color: #336699;
   position: absolute;
-  top: 200px;
+  top: 260px;
 }
 
 #increase-temp {
-  left: 250px;
+  left: 200px;
 }
 
 #decrease-temp {
-  right: 300px;
+  left: 275px;
 }
 
 #reset-temp {
@@ -25,11 +25,11 @@
   color: #f2f2f2;
   font-size: 16px;
   height: 35px;
-  width: 100px;
+  width: 125px;
   position: absolute;
   display: inline;
-  top: 370px;
-  left: 645px;
+  top: 325px;
+  left: 200px;
 }
 
 .psm {
@@ -37,7 +37,7 @@
   position: absolute;
   display: inline-block;
   top: 350px;
-  left: 455px;
+  left: 195px;
   margin-top: 20px;
 }
 
@@ -50,7 +50,7 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  width: 115px;
+  width: 120px;
   height: 30px;
   padding-top: 5px;
   padding-left: 5px;

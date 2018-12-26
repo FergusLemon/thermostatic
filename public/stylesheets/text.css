@@ -7,11 +7,20 @@
   padding-left: 20px;
 }
 
-#temperature {
-  font-size: 200px;
+#temperature, #celsius {
   position: absolute;
+}
+
+#temperature {
+  font-size: 170px;
+  left: 110px;
   top: -100px;
-  left: 500px;
+}
+
+#celsius {
+  font-size: 150px;
+  left: 280px;
+  top: -70px;
 }
 
 #psm-text {

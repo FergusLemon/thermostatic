@@ -1,5 +1,10 @@
 # Thermostatic
-A simpe web application that allows users to interact with a thermostat, turning the temperature up and down between 10°C and 32°C depending on whether Power Saving Mode is turned on or off. Users can also type the name of a city in a search box and retrieve local weather information for that city, this functionality is provided through the OpenWeatherMap.org API. This application was built as part of the Makers Academy course (week 5). The website is not being hosted on an external service so to use it a user has to run it locally on their own device, instructions for doing so are available below.  
+
+A simpe web application that allows users to interact with a thermostat, turning the temperature up and down between 10°C and 32°C depending on whether Power Saving Mode is turned on or off. Users can also type the name of a city in a search box and retrieve local weather information for that city, this functionality is provided through the OpenWeatherMap.org API. 
+
+This application was built as part of the Makers Academy course (week 5). The website is not being hosted on an external service so to use it a user has to run it locally on their own device, instructions for doing so are available below.  
+
+![Thermostatic Homepage](/public/images/thermostatic.jpg)
 
 ### Installation
 

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  showWeather("London");
   function showWeather(city) {
     $.ajax({
       url: "http://api.openweathermap.org/data/2.5/weather",
@@ -14,11 +15,11 @@ $(document).ready(function() {
     .done(function(json) {
       $("#location-name").text(json.name);
       $("#location-weather").text(json.weather[0].main);
-      $("#location-temp").text(json.main.temp + " C");
+      $("#location-temp").text(json.main.temp + " °C");
     })
 
     .fail(function(xhr, status, errorThrown) {
-      alert("There was a problem getting the weather data, please check the spelling on the city you are trying to get weather information for.");
+      alert("There was a problem getting the weather data, please check the spelling of the city you are trying to get weather information for.");
       console.log("Error: " + errorThrown);
       console.log("Status: " + status);
       console.dir(xhr);

@@ -1,8 +1,8 @@
 #header {
   color: #f2f2f2;
-  background-color: #85a3e0;
+  background-color: #808080;
   font-size: 70px;
-  font-family: helvetica, arial, sans-serif;
+  font-family: impact, arial, sans-serif;
   display: inline;
   padding-left: 20px;
 }
@@ -28,4 +28,13 @@
   font-family: "courier new", courier, monospace;
   margin-top: 20px;
   padding-left: 15px;
+  width: 110px;
+}
+
+li {
+  font-family: impact, arial, sans-serif;
+  font-size: 100px;
+  color: #0059b3;
+  text-align: left;
+  overflow-wrap: break-word;
 }

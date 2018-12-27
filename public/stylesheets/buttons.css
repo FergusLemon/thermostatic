@@ -21,7 +21,7 @@
 #reset-temp {
   border-radius: 15px;
   outline: 0;
-  background-color: #ff8c1a;
+  background-color: #808080;
   color: #f2f2f2;
   font-size: 16px;
   height: 35px;
@@ -74,9 +74,9 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(75px);
-  -ms-transform: translateX(75px);
-  transform: translateX(75px);
+  -webkit-transform: translateX(85px);
+  -ms-transform: translateX(85px);
+  transform: translateX(85px);
 }
 /* CSS tips for the toggle button taken from w3schools.com, available at:
  * https://www.w3schools.com/howto/howto_css_switch.asp */
@@ -84,5 +84,6 @@ input:checked + .slider:before {
 #get-weather {
   position: absolute;
   top:58px;
-  right:75px;
+  right:70px;
+  color: #404040;
 }

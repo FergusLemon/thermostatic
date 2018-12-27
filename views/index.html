@@ -11,19 +11,13 @@
         <h1 id="header">Thermostatic</h1>
         <form id="city-weather">
           <input id="enter-city" type="text" name="city" placeholder="Enter City..."></input>
-          <button id="get-weather" type="submit">Check Weather</button>
+          <button id="get-weather" type="submit">Display Weather</button>
         </form>
       </div>
-      <div>
+      <div id="thermostat">
         <button id="increase-temp">+</button>
-      </div>
-      <div>
         <p id="temperature"></p><p id="celsius">°C</p>
-      </div>
-      <div>
         <button id="decrease-temp">-</button>
-      </div>
-      <div>
         <label class="psm">
           <input id="psm-switch" type="checkbox">
           <span class="slider"></span>
@@ -31,11 +25,13 @@
         </label>
         <button id="reset-temp">Reset</button>
       </div>
-      <ul id="location">
-        <li id="location-name"></li>
-        <li id="location-weather"></li>
-        <li id="location-temp"></li>
-      </ul>
+      <div id="outdoor-weather">
+        <ul id="location">
+          <li id="location-name"></li>
+          <li id="location-weather"></li>
+          <li id="location-temp"></li>
+        </ul>
+      </div>
     <script src="../src/thermostat.js"></script>
     <script src="../src/jquery-3.3.1.min.js"></script>
     <script src="../src/interface.js"></script>
